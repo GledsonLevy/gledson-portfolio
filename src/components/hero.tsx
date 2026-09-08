@@ -35,14 +35,14 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a 
               href="#projetos" 
-              className="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-300 flex items-center gap-2 group hover:-translate-y-0.5 shadow-lg shadow-blue-500/20"
+              className="px-6 py-3.5 rounded-xl bg-blue-600 md:hover:bg-blue-700 text-white font-semibold transition-all duration-300 flex items-center gap-2 group md:hover:-translate-y-0.5 shadow-lg shadow-blue-500/20"
             >
               Ver Projetos
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={18} className="md:group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
               href="#hobbies" 
-              className="px-6 py-3.5 rounded-xl bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text font-semibold hover:bg-gray-200/70 dark:hover:bg-slate-700/60 transition-all duration-300 border border-gray-200/80 dark:border-slate-700/80 hover:-translate-y-0.5"
+              className="px-6 py-3.5 rounded-xl bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text font-semibold md:hover:bg-gray-200/70 dark:md:hover:bg-slate-700/60 transition-all duration-300 border border-gray-200/80 dark:border-slate-700/80 md:hover:-translate-y-0.5"
             >
               Sobre mim
             </a>
@@ -51,14 +51,14 @@ export function Hero() {
 
         {/* Coluna da Direita: Foto Assimétrica & Badge */}
         <div className="w-full lg:w-5/12 relative group mt-4 lg:mt-0">
-           {/* Moldura Deslocada (Estilo Dossiê) */}
-           <div className="absolute inset-0 -translate-x-4 translate-y-4 lg:-translate-x-6 lg:translate-y-6 border-2 border-blue-500/30 dark:border-blue-500/20 rounded-2xl transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+           {/* Moldura Deslocada (Estilo Dossiê) - Corrigido para mobile */}
+            <div className="absolute inset-0 -translate-x-4 translate-y-4 lg:-translate-x-6 lg:translate-y-6 border-2 border-blue-500/30 dark:border-blue-500/20 rounded-2xl transition-transform duration-500 md:group-hover:translate-x-0 md:group-hover:translate-y-0"></div>
            
            {/* Imagem */}
            <img 
-             src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&q=80&w=400&h=400" 
+             src="../../public/images/gledson.png" 
              alt="Gledson" 
-             className="relative z-10 w-full aspect-square object-cover rounded-2xl grayscale opacity-90 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 shadow-2xl"
+             className="relative z-10 w-full aspect-square object-cover rounded-2xl  shadow-2xl"
            />
            
            {/* Badge Terminal Flutuante */}

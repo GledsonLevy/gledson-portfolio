@@ -1,7 +1,9 @@
 // src/components/Projetos.tsx
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GitBranch, ExternalLink, Code2, ChevronDown, ChevronUp, CheckCircle2, Maximize2, X } from 'lucide-react';
+// Adicionei Lock e Archive aqui nos imports do lucide-react 👇
+import {ExternalLink, Code2, ChevronDown, ChevronUp, CheckCircle2, Maximize2, X, Lock, Archive } from 'lucide-react';
+import {FaGithub} from 'react-icons/fa';
 import { myProjects } from '../data/projects';
 import type { Project } from '../data/types';
 
@@ -29,7 +31,6 @@ export function Projetos() {
   return (
     <section id="projetos" className="py-20 lg:py-32 scroll-mt-24">
       
-      {/* Cabeçalho */}
       <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <span className="font-mono text-xs text-blue-600 dark:text-blue-500 tracking-widest uppercase mb-2 block font-semibold">
@@ -44,7 +45,6 @@ export function Projetos() {
         </p>
       </div>
 
-      {/* Tabs (Botões de Seleção) */}
       <div className="flex flex-wrap gap-3 mb-10">
         {myProjects.map((project) => (
           <button
@@ -61,35 +61,26 @@ export function Projetos() {
         ))}
       </div>
 
-      {/* Card Principal */}
       <div className="rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 overflow-hidden transition-all duration-300 shadow-sm">
         <div className="flex flex-col lg:flex-row items-stretch">
           
-          {/* Lado Esquerdo: Galeria com suporte a Mobile/Desktop */}
           <div className="lg:w-[55%] border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-950/50 flex flex-col items-center justify-between p-6 min-h-[380px]">
-            
-            {/* Visualizador da Imagem */}
             <div 
               onClick={() => galleryImages[selectedImageIndex] && setActiveModalImage(galleryImages[selectedImageIndex])}
               className="w-full h-[280px] flex items-center justify-center rounded-xl overflow-hidden border border-gray-200 dark:border-slate-800 bg-gray-100 dark:bg-slate-900/80 group relative cursor-pointer p-2"
             >
               {galleryImages[selectedImageIndex] ? (
                 <>
-                  {/* Fundo Desfocado Ambiental (resolve o espaço vazio de telas mobile) */}
                   <img 
                     src={galleryImages[selectedImageIndex]} 
                     alt="" 
                     className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 pointer-events-none" 
                   />
-
-                  {/* Imagem Principal sem Cortes */}
                   <img 
                     src={galleryImages[selectedImageIndex]} 
                     alt={`${activeProject.title} preview ${selectedImageIndex + 1}`}
                     className="relative z-10 max-h-full max-w-full object-contain rounded-lg drop-shadow-md transition-transform duration-300 group-hover:scale-105"
                   />
-
-                  {/* Overlay ao passar o mouse */}
                   <div className="absolute inset-0 z-20 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white font-mono text-xs backdrop-blur-[2px]">
                     <Maximize2 size={16} /> Clique para expandir
                   </div>
@@ -104,7 +95,6 @@ export function Projetos() {
               )}
             </div>
 
-            {/* Miniaturas */}
             <div className="flex gap-3 mt-4 w-full justify-center">
               {galleryImages.map((img, idx) => (
                 <button
@@ -132,7 +122,6 @@ export function Projetos() {
             </div>
           </div>
 
-          {/* Lado Direito: Resumo do Projeto */}
           <div className="lg:w-[45%] flex flex-col justify-between p-8">
             <div>
               <div className="flex gap-2 mb-4">
@@ -169,18 +158,39 @@ export function Projetos() {
             </div>
 
             <div className="pt-4 border-t border-gray-200 dark:border-slate-800 flex flex-col gap-3">
+              
+              {/* ÁREA DOS BOTÕES ATUALIZADA 👇 */}
               <div className="flex gap-3">
-                {activeProject.githubUrl && (
+                {activeProject.githubUrl ? (
+                  // Botão Normal (Quando tem link)
                   <a href={activeProject.githubUrl} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 flex-1 py-2.5 px-3 rounded-xl border border-gray-300 dark:border-slate-700 text-gray-800 dark:text-white font-mono text-xs hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
-                    <GitBranch size={16} /> Repositório
+                    <FaGithub size={16} /> Repositório
                   </a>
+                ) : (
+                  // Botão "Fantasma" Criativo (Quando NÃO tem link)
+                  <div 
+                    className="flex items-center justify-center gap-2 flex-1 py-2.5 px-3 rounded-xl border border-dashed border-gray-300 dark:border-slate-700 text-gray-400 dark:text-slate-500 font-mono text-xs cursor-help bg-gray-50/50 dark:bg-slate-900/30 transition-colors hover:border-gray-400 dark:hover:border-slate-600"
+                    title={
+                      activeProject.id === 'buffet' 
+                        ? 'Repositório confidencial / Código privado' 
+                        : 'Projeto raiz! Desenvolvido localmente antes da equipe dominar o Git 😅'
+                    }
+                  >
+                    {activeProject.id === 'buffet' ? (
+                      <><Lock size={16} /> Privado</>
+                    ) : (
+                      <><Archive size={16} /> Sem Git</>
+                    )}
+                  </div>
                 )}
+
                 {activeProject.liveUrl && (
                   <a href={activeProject.liveUrl} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 flex-1 py-2.5 px-3 rounded-xl bg-blue-600 text-white font-mono font-bold text-xs hover:bg-blue-500 transition-colors">
                     <ExternalLink size={16} /> Deploy
                   </a>
                 )}
               </div>
+              {/* FIM DA ÁREA DOS BOTÕES 👆 */}
 
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
@@ -196,7 +206,6 @@ export function Projetos() {
           </div>
         </div>
 
-        {/* Painel Expansível */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -242,7 +251,6 @@ export function Projetos() {
         </AnimatePresence>
       </div>
 
-      {/* Modal de Zoom em Tela Cheia */}
       <AnimatePresence>
         {activeModalImage && (
           <motion.div

@@ -1,5 +1,5 @@
 // src/components/Footer.tsx
-import { GitBranch, User, Mail } from 'lucide-react'; 
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export function Footer() {
   return (
@@ -67,14 +67,14 @@ export function Footer() {
               Conexões
             </h4>
             <div className="flex gap-3">
-              <a href="#" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
-                <GitBranch size={20} />
+              <a href="https://github.com/gledsonlevy" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
+                <FaGithub size={20} />
               </a>
-              <a href="#" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
-                <User size={20} />
+              <a href="https://www.linkedin.com/in/gledsonlevy" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
+                <FaLinkedin size={20} />
               </a>
-              <a href="mailto:seu-email@exemplo.com" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
-                <Mail size={20} />
+              <a href="mailto:gledsonlevy24@gmail.com" className="p-3 rounded-xl bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1">
+                <FaEnvelope size={20} />
               </a>
             </div>
           </div>

@@ -7,14 +7,14 @@ export const myProjects: Project[] = [
     id: 'neurolearn',
     title: 'NeuroLearn',
     description:
-      'Plataforma de aprendizagem desenvolvida para oferecer uma experiência de estudo simples e interativa.',
+      'Plataforma de aprendizagem gamificada com quizzes interativos e sistema de conquistas',
     longDescription:
-      'O NeuroLearn é uma plataforma educacional desenvolvida com o objetivo de tornar o processo de aprendizagem mais simples e interativo. O projeto reúne conteúdos e recursos de estudo em uma única aplicação, proporcionando uma experiência mais organizada para os usuários.',
+      'O NeuroLearn foi desenvolvido com o objetivo de tornar o aprendizado mais interativo e motivador para pessoas no espectro autista. A plataforma utiliza quizzes e elementos de gamificação, como conquistas, para estimular a participação e incentivar a continuidade dos estudos. A proposta busca transformar o aprendizado em uma experiência mais envolvente, utilizando recursos de interação e recompensa para manter o usuário engajado',
     features: [
-      'Plataforma voltada para aprendizagem e estudos',
-      'Interface simples e interativa',
-      'Organização de conteúdos educacionais',
-      'Sistema desenvolvido com integração a banco de dados'
+      'Quizzes interativos',
+      'Sistema de conquistas',
+      'Aprendizado gamificado',
+      'Sistema de progressão e incentivo ao aprendizado'
     ],
     image: '../../public/images/projetos/neurolearn1.png', 
     images: [
@@ -25,7 +25,7 @@ export const myProjects: Project[] = [
     technologies: ['PHP', 'CSS', 'JavaScript', 'HTML', 'MySQL'],
     category: 'Acadêmico',
     status: 'Concluído',
-    githubUrl: 'https://github.com/seu-usuario/neurolearn'
+    githubUrl: 'https://github.com/GledsonLevy/NeuroLearn'
     
   },
 
@@ -33,100 +33,100 @@ export const myProjects: Project[] = [
     id: 'mulheres-tec',
     title: 'Mulheres na Tecnologia',
     description:
-      'Sistema gamificado sobre quatro mulheres importantes na área da tecnologia, utilizando jogos para apresentar suas histórias e contribuições de forma didática.',
+      'Plataforma gamificada criada para apresentar mulheres que marcaram a história da tecnologia',
     longDescription:
-      'Mulheres na Tecnologia é um sistema educacional gamificado criado para apresentar a trajetória e os feitos de quatro mulheres importantes para a história da tecnologia. O projeto utiliza uma abordagem interativa, transformando o conteúdo informativo em jogos e atividades para tornar o aprendizado mais didático e envolvente.',
+      'O projeto foi desenvolvido para a Feira do Conhecimento do Ensino Médio, em 2024, durante o 2º ano. A plataforma homenageia Ada Lovelace, Margaret Hamilton, Grace Hopper e Kathleen Booth, apresentando suas contribuições para a tecnologia de forma interativa. Os usuários podiam completar quebra-cabeças e jogos da memória relacionados a cada personalidade para desbloquear conteúdos explicativos. Ao final, um quiz avaliava o conhecimento adquirido e apresentava pontuação e ranking em tempo real, tornando o aprendizado mais dinâmico e gamificado',
     features: [
-      'Conteúdo sobre quatro mulheres importantes da tecnologia',
-      'Sistema de aprendizado baseado em gamificação',
-      'Jogos educativos e interativos',
-      'Apresentação didática das contribuições históricas'
+      'Quebra-cabeças interativos',
+      'Jogo da memória',
+      'Quiz sobre as personalidades apresentadas',
+      'Pontuação e ranking em tempo real'
     ],
-    image: '../../public/images/projetos/MulheresTec1.png', // Capa principal
+    image: '../../public/images/projetos/MulheresTec1.png',
     images: [
-      '../../public/images/projetos/MulheresTec1.png', // Print 1 (ex: Dashboard)
-      '../../public/images/projetos/MulheresTec2.png', // Print 2 (ex: Tela de Quiz)
-      '../../public/images/projetos/MulheresTec3.png', // Print 3 (ex: Configurações)
+      '../../public/images/projetos/MulheresTec1.png',
+      '../../public/images/projetos/MulheresTec2.png',
+      '../../public/images/projetos/MulheresTec3.png',
     ],
     technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     category: 'Acadêmico',
     status: 'Concluído',
-    githubUrl: 'https://github.com/seu-usuario/mulheres-tec'
+    //githubUrl: 'https://github.com/seu-usuario/mulheres-tec'
   },
 
   {
     id: 'spasafe',
     title: 'SpaSafe',
     description:
-      'Aplicativo desenvolvido para centralizar informações e facilitar o acompanhamento de situações relacionadas a desastres.',
+      'Aplicativo desenvolvido para identificar, informar e alertar sobre áreas afetadas por desastres ambientais',
     longDescription:
-      'O SpaSafe é um aplicativo desenvolvido para centralizar informações relacionadas a situações de desastre e facilitar o acompanhamento dessas ocorrências. O projeto foi desenvolvido para dispositivos móveis utilizando Flutter e Dart.',
+      'O SpaSafe foi desenvolvido para a Feira do Conhecimento do Ensino Médio, em 2025, com o objetivo de utilizar a tecnologia como ferramenta de apoio diante de desastres ambientais, como enchentes. Os usuários podiam marcar áreas de risco no mapa e adicionar informações sobre os problemas encontrados. A plataforma também contava com notícias relacionadas às regiões afetadas e alertas para avisar usuários que estivessem próximos de locais com risco elevado. A proposta era beneficiar tanto moradores e viajantes quanto auxiliar órgãos responsáveis na identificação e acompanhamento dessas ocorrências',
     features: [
-      'Aplicativo desenvolvido para dispositivos móveis',
-      'Centralização de informações relacionadas a desastres',
-      'Acompanhamento de situações e ocorrências',
-      'Interface adaptada para uso em dispositivos móveis'
+      'Mapa com registro de áreas de risco',
+      'Cadastro de ocorrências e informações sobre problemas',
+      'Alertas de áreas com alto risco de desastre',
+      'Notícias relacionadas às regiões afetadas'
     ],
-    image: '../../public/images/projetos/Spasafe1.jpeg', // Capa principal
+    image: '../../public/images/projetos/Spasafe1.jpeg',
     images: [
-      '../../public/images/projetos/Spasafe1.jpeg', // Print 1 (ex: Dashboard)
-      '../../public/images/projetos/Spasafe2.jpeg', // Print 2 (ex: Tela de Quiz)
-      '../../public/images/projetos/Spasafe3.jpeg', // Print 3 (ex: Configurações)
+      '../../public/images/projetos/Spasafe1.jpeg',
+      '../../public/images/projetos/Spasafe2.jpeg',
+      '../../public/images/projetos/Spasafe3.jpeg',
     ],
     technologies: ['Flutter', 'Dart'],
     category: 'Acadêmico',
     status: 'Concluído',
-    githubUrl: 'https://github.com/seu-usuario/spasafe'
+   // githubUrl: 'https://github.com/seu-usuario/spasafe'
   },
 
   {
     id: 'boostresult',
     title: 'BoostResult',
     description:
-      'Aplicação web desenvolvida para auxiliar usuários no acompanhamento e obtenção de melhores resultados.',
+      'Plataforma para conectar alunos e personal trainers por meio de chat, envio de arquivos e acompanhamento',
     longDescription:
-      'O BoostResult é uma aplicação web desenvolvida com foco no acompanhamento de resultados e na organização das informações necessárias para auxiliar os usuários na busca por um melhor desempenho.',
+      'O BoostResult foi desenvolvido como trabalho final da disciplina de Programação Web, no 3º ano do Ensino Médio. A proposta era criar uma plataforma que facilitasse a conexão entre alunos e personal trainers, reunindo funcionalidades como conversas por chat, envio de arquivos e compartilhamento de informações. A ideia surgiu como uma espécie de combinação entre LinkedIn e WhatsApp, adaptada ao contexto de treinamento e acompanhamento profissional',
     features: [
-      'Aplicação web voltada para acompanhamento de resultados',
-      'Organização de informações dos usuários',
-      'Interface para acompanhamento de desempenho',
-      'Integração com banco de dados'
+      'Chat entre alunos e personal trainers',
+      'Envio e compartilhamento de arquivos',
+      'Conexão entre alunos e profissionais',
+      'Compartilhamento de informações e acompanhamento'
     ],
-    image: '../../public/images/projetos/BoostResult1.png', // Capa principal
+    image: '../../public/images/projetos/BoostResult1.png',
     images: [
-      '../../public/images/projetos/BoostResult1.png', // Print 1 (ex: Dashboard)
-      '../../public/images/projetos/BoostResult2.png', // Print 2 (ex: Tela de Quiz)
-      '../../public/images/projetos/BoostResult3.png', // Print 3 (ex: Configurações)
+      '../../public/images/projetos/BoostResult1.png',
+      '../../public/images/projetos/BoostResult2.png',
+      '../../public/images/projetos/BoostResult3.png',
     ],
     technologies: ['PHP', 'CSS', 'JavaScript', 'HTML', 'MySQL'],
     category: 'Acadêmico',
     status: 'Concluído',
-    githubUrl: 'https://github.com/seu-usuario/boostresult'
+    githubUrl: 'https://github.com/GledsonLevy/BoostResult'
   },
 
   {
     id: 'buffet',
     title: 'Buffet',
     description:
-      'Sistema para gerenciamento de buffet, desenvolvido para organizar processos, informações e operações do negócio em uma única plataforma.',
+      'Plataforma para auxiliar no gerenciamento, organização e controle dos processos de um buffet',
     longDescription:
-      'O Buffet é um sistema desenvolvido para auxiliar no gerenciamento de um negócio de buffet, centralizando informações e processos em uma única plataforma. O projeto utiliza uma aplicação web moderna, com frontend desenvolvido em React, TypeScript e Vite, e faz parte de uma experiência de desenvolvimento profissional.',
+      'O Buffet é uma plataforma desenvolvida pela DevDigital para auxiliar na gestão e organização dos processos de um buffet. O sistema centraliza diferentes áreas da operação em um único ambiente, permitindo acompanhar informações financeiras, funcionários, utensílios e eventos, além de oferecer um dashboard com indicadores importantes para facilitar a tomada de decisões. O projeto foi concluído e atualmente está sendo utilizado em um ambiente real',
     features: [
-      'Sistema para gerenciamento de buffet',
-      'Centralização das informações do negócio',
-      'Organização dos processos e operações',
-      'Interface web desenvolvida com React e TypeScript'
+      'Dashboard com indicadores de gestão',
+      'Controle de gastos e lucros',
+      'Gerenciamento de funcionários e utensílios',
+      'Criação e gerenciamento de eventos'
     ],
-    image: '../../public/images/projetos/buffet1.png', // Capa principal
+    image: '../../public/images/projetos/buffet1.png',
     images: [
-      '../../public/images/projetos/buffet1.png', // Print 1 (ex: Dashboard)
-      '../../public/images/projetos/buffet2.png', // Print 2 (ex: Tela de Quiz)
-      '../../public/images/projetos/buffet3.png', // Print 3 (ex: Configurações)
+      '../../public/images/projetos/buffet1.png',
+      '../../public/images/projetos/buffet2.png',
+      '../../public/images/projetos/buffet3.png',
     ],
-    technologies: ['React', 'TypeScript', 'Vite'],
+    technologies: ['React', 'TypeScript', 'Next', 'Javascript'],
     category: 'Profissional',
-    status: 'Em desenvolvimento',
-    githubUrl: 'https://github.com/seu-usuario/buffet'
+    status: 'Concluído',
+    // githubUrl: 'https://github.com/seu-usuario/buffet'
   }
 ];
 

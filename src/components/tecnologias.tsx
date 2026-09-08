@@ -8,6 +8,50 @@ export function Tecnologias() {
   return (
     <section id="tecnologias" className="py-20 lg:py-32 border-t border-gray-200 dark:border-slate-800 scroll-mt-10">
       
+      {/* Regras de CSS dedicadas para separar Mouse (PC) de Toque (Celular) */}
+      <style>{`
+        /* 1. DISPOSITIVOS COM MOUSE (Notebook / Monitores) */
+        @media (hover: hover) and (pointer: fine) {
+          .tech-container {
+            pointer-events: auto;
+          }
+          /* Pausa o carrossel ao passar o mouse por cima */
+          .tech-container:hover .tech-track {
+            animation-play-state: paused;
+          }
+          /* Estado inicial no PC: Ícone em preto e branco e semi-transparente */
+          .tech-card {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+          }
+          .tech-card-icon {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+          }
+          /* Quando passa o MOUSE no PC: ganha cor e 100% de opacidade */
+          .tech-card:hover {
+            opacity: 1;
+          }
+          .tech-card:hover .tech-card-icon {
+            filter: grayscale(0%);
+          }
+        }
+
+        /* 2. DISPOSITIVOS TOUCH (Celulares e Tablets) */
+        @media (hover: none), (pointer: coarse) {
+          .tech-container {
+            /* Desativa o toque no carrossel para NUNCA travar a tela ou congelar ao clicar */
+            pointer-events: none;
+          }
+          .tech-card {
+            opacity: 1;
+          }
+          .tech-card-icon {
+            filter: grayscale(0%);
+          }
+        }
+      `}</style>
+
       {/* Cabeçalho */}
       <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
@@ -23,22 +67,21 @@ export function Tecnologias() {
         </p>
       </div>
 
-      {/* Container do Carrossel (Oculta o que passa da borda) */}
-      <div className="flex overflow-hidden group">
+      {/* Container do Carrossel */}
+      <div className="tech-container flex overflow-hidden select-none">
         
-        {/* Pista animada que desliza para a esquerda */}
-        <div className="flex gap-16 w-max animate-scroll group-hover:[animation-play-state:paused] px-8">
+        {/* Pista animada */}
+        <div className="tech-track flex gap-16 w-max animate-scroll px-8">
           {carouselItems.map((tech, index) => (
             <div 
-              key={index} 
-              className="flex flex-col items-center gap-3 min-w-[80px] opacity-70 hover:opacity-100 transition-opacity cursor-default"
+              key={`${tech.name}-${index}`} 
+              className="tech-card flex flex-col items-center gap-3 min-w-[80px] cursor-default"
             >
               <img 
                 src={tech.icon} 
                 alt={`${tech.name} logo`} 
-                className="h-12 w-12 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                className="tech-card-icon h-12 w-12 object-contain"
               />
-              {/* Ajustado para suportar o modo escuro sem ficar invisível */}
               <span className="text-sm font-mono text-gray-500 dark:text-slate-400">
                 {tech.name}
               </span>
