@@ -1,14 +1,14 @@
 // src/components/Tecnologias.tsx
-import { myTechnologies } from '../data/technologies';
+import { myTechnologies } from "../data/technologies";
 
 export function Tecnologias() {
-  // Duplicamos o array para criar o efeito infinito sem cortes
   const carouselItems = [...myTechnologies, ...myTechnologies];
 
   return (
-    <section id="tecnologias" className="py-20 lg:py-32 border-t border-gray-200 dark:border-slate-800 scroll-mt-10">
-      
-      {/* Regras de CSS dedicadas para separar Mouse (PC) de Toque (Celular) */}
+    <section
+      id="tecnologias"
+      className="py-20 lg:py-32 border-t border-gray-200 dark:border-slate-800 scroll-mt-20 "
+    >
       <style>{`
         /* 1. DISPOSITIVOS COM MOUSE (Notebook / Monitores) */
         @media (hover: hover) and (pointer: fine) {
@@ -52,7 +52,6 @@ export function Tecnologias() {
         }
       `}</style>
 
-      {/* Cabeçalho */}
       <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <span className="font-mono text-xs text-blue-600 dark:text-blue-500 tracking-widest uppercase mb-2 block font-semibold">
@@ -63,23 +62,20 @@ export function Tecnologias() {
           </h2>
         </div>
         <p className="font-mono text-xs text-gray-500 dark:text-slate-400 max-w-xs md:text-right">
-          Ferramentas e linguagens 
+          Ferramentas e linguagens
         </p>
       </div>
 
-      {/* Container do Carrossel */}
       <div className="tech-container flex overflow-hidden select-none">
-        
-        {/* Pista animada */}
         <div className="tech-track flex gap-16 w-max animate-scroll px-8">
           {carouselItems.map((tech, index) => (
-            <div 
-              key={`${tech.name}-${index}`} 
+            <div
+              key={`${tech.name}-${index}`}
               className="tech-card flex flex-col items-center gap-3 min-w-[80px] cursor-default"
             >
-              <img 
-                src={tech.icon} 
-                alt={`${tech.name} logo`} 
+              <img
+                src={tech.icon}
+                alt={`${tech.name} logo`}
                 className="tech-card-icon h-12 w-12 object-contain"
               />
               <span className="text-sm font-mono text-gray-500 dark:text-slate-400">
@@ -88,7 +84,6 @@ export function Tecnologias() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
