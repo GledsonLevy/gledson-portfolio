@@ -56,7 +56,7 @@ export function Hero() {
            
            {/* Imagem */}
            <img 
-             src="../../public/images/gledson.png" 
+             src="/images/Gledson.png" 
              alt="Gledson" 
              className="relative z-10 w-full aspect-square object-cover rounded-2xl  shadow-2xl"
            />
